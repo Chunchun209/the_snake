@@ -24,7 +24,6 @@ TURNS = {
     pg.K_RIGHT: (RIGHT, LEFT),
 }
 
-
 # Базовые цвета:
 BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
@@ -137,11 +136,7 @@ class Snake(GameObject):
             self.last = None
 
     def reset(self):
-        """Сбрасывает игру в начальное состояние.
-
-        Вызывается при столкновении змейки с самой собой для обнуления
-        всех параметров тела и направления к дефолтным значениям.
-        """
+        """Сбрасывает игру в начальное состояние при столкновении."""
         self.length = 1
         self.positions = [self.position]
         self.direction = RIGHT
